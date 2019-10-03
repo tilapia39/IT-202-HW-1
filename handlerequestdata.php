@@ -17,12 +17,29 @@ if(isset($_GET['number'])){
 	echo "<br>but it might not be<br>";
 }
 
+if(isset($_GET['number1'])){
+		$number1 = $_GET['number1'];
+	}
+	if(isset($_GET['number2'])){
+		$number2 = $_GET['number2'];
+	}
+	if(isset($number1) && isset($number2)){
+		if(is_numeric($number1) && is_numeric($number2)){
+			$number1 = (int)$number1;
+			$number2 = (int)$number2;
+			echo "Sum: " . ($number1 + $number2);
+		}
+		else{
+			echo "<br> Values aren't numbers";
+		}
+		echo "<br>";
+		echo "Concat: " . ($number1 . $number2);
+	}
+	if(isset($_GET['parameter'])){
+		echo "<div> " . $_GET['parameter'] . "</div>";
+	}
 
-if (is_numeric($number)){
-	echo var_export($number, true) . "is numeric", PHP_EOL;
-	} else {
-		echo var_export($number, true) . " is NOT numeric<br>", PHP_EOL;
-}
+
 
 $all=$name.$number;
 
