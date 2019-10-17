@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+	function queryParam(){
+		var params = new URLSearchParams(location.search);
+		if(params.has('page')){
+			var page = params.get('page');
+			var ele = document.getElementById(page);
+			if(ele){
+				let home = document.getElementById('home');
+				let about = document.getElementById('about');
+				home.style.display="none";
+				about.style.display = "none";
+				ele.style.display = "block";
+			}
+		}
+		else{
+			let home = document.getElementById('home');
+			home.style.display = "block";
+		}
+	}
+</script>
+</head>
+<body onload="queryParam();">
+	<header>
+		<nav>
+			<a href="Home.html">Home</a>
+			<a href="about.html">about</a>
+		</nav>
+	</header>
+	<div id="home">
+
+	</div>
+	<div id="about">
+<h1>
+	This is the about page
+<h1>
+		<!-- About page using HTML5 Semantics-->
+	</div>
+	<footer></footer>
+</body>
+</html>
