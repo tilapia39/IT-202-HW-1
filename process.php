@@ -1,32 +1,28 @@
-<?php 
- // to get values pass from form in login.php file
- $username = "";
-
-if(isset($_POST['username'])){
-    $username = $_POST['username'];
+<?php
+session_start(); 
+$error = ''; 
+if (isset($_POST['submit'])) {
+if (empty($_POST['username']) || empty($_POST['password'])) {
+$error = "Username or Password is invalid";
 }
- $password = "";
-if(isset($_POST['password'])){
-    $password = $_POST['password'];
- }
- // to prevent mysql injection
- $username = stripcslashes($username);
- $password = stripcslashes($password);
- $username = mysql_real_escape_string($username);
- $password = mysql_real_escape_string($password);
+else{
 
- //connect to the server select database
- 	mysql_connect("sql1.njit.edu", "lat33", "");
-	mysql_select_db("lat33");
+$username = $_POST['username'];
+$password = $_POST['password'];
 
- // Query the database for user
- $result = mysql_query("SELECT * FROM users WHERE username='$username' AND password='$password'")
-  or die('Failed to query database'.mysql_error());
- $row = mysql_fetch_array($result);
- if ( $row['username'] == $username && $row['password'] == $password ) {
-  echo "login success! Welcome".$row['username'];
- } else {
-     echo "Failed to login!";
+ $conn = mysqli_connect("sql1.njit.edu", "lat33", "j5L3ngLv", "lat33");
+
+$query = "SELECT username, password from login where username=? AND password=? LIMIT 1";
+
+$stmt = $conn->prepare($query);
+$stmt->bind_param("ss", $username, $password);
+$stmt->execute();
+$stmt->bind_result($username, $password);
+$stmt->store_result();
+if($stmt->fetch()) //fetching the contents of the row {
+$_SESSION['login_user'] = $username; 
+header("location: profile.php"); 
 }
-
+mysqli_close($conn); 
+}
 ?>
