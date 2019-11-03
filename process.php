@@ -10,7 +10,7 @@ else{
 $username = $_POST['username'];
 $password = $_POST['password'];
 
- $conn = mysqli_connect("sql1.njit.edu", "lat33", "j5L3ngLv", "lat33");
+ $conn = mysqli_connect();
 
 $query = "SELECT username, password from login where username=? AND password=? LIMIT 1";
 
