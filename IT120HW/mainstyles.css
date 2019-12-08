@@ -1,0 +1,65 @@
+@charset "utf-8";
+
+body {
+	background-color: white;
+	font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
+}
+
+/*
+	Main - Dodger Blue - rgb(30,144,255)
+	Secondary - Light Sea Green - rgb(32,178,170)
+	Accent - Crimson - rgb(220,20,60)
+*/
+
+nav ul {
+	background-color: rgb(30,144,255);
+	line-height: 2.5em;
+	list-style-type: none;
+	padding-left: 0px;
+}
+
+
+h1 {
+	background-color: rgb(32,178,170);
+	text-align: center;	
+	font-size: 3em;
+}
+
+section h2 {
+	color: rgba(255,255,255,0.7);
+	background-color: rgb(220,20,60);
+	font-weight: normal;
+	letter-spacing: 0.7em;
+	padding-left: 10px;
+}
+
+h3 {
+	color: rgb(0,0,0);
+	background-color: rgb(30,144,255);
+	padding-left: 10px;
+	padding-bottom: 10px;
+}
+
+.websites ol {
+	list-style-image: url(luma.png);
+}
+
+footer {
+	color: rgb(220,20,60);
+	background-color: rgb(32,178,170);
+	font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+	font-size: 0.9em;
+	line-height: 3em;
+	text-align: center;
+	font-weight: bold;
+	font-variant: small-caps;
+}
+
+nav a {
+	color: white;
+	text-decoration: none;
+}
+
+nav a:hover {
+	color: rgb(220,20,60);
+}

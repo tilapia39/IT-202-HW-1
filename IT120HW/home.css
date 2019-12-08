@@ -1,0 +1,112 @@
+
+body {
+	width: 1000px;
+}
+
+header img {
+	width: 100%;
+}
+
+nav {
+	margin: auto;
+}
+
+header .horizontalNavigation li {
+	width: 100%;
+	text-align: center;
+}
+
+header .horizontalNavigation li:first-of-type {
+	float: left;
+	width: 20%;
+}
+
+header .horizontalNavigation li:nth-of-type(2) {
+	float: left;
+	width: 20%;
+}
+
+header .horizontalNavigation li:nth-of-type(3) {
+	float: left;
+	width: 20%;
+}
+
+header .horizontalNavigation li:nth-of-type(4) {
+	float: left;
+	width: 20%;
+}
+
+section {
+	clear: left;
+}
+
+article {
+	width: 75%;
+}
+
+.websites {
+	width: 400px;
+}
+
+#favmeals {
+	text-align: center;
+}
+
+#cheese {
+	float: left;
+	width: 50%;
+}
+
+#cheese img {
+	display: block;
+	width: 100%;
+}
+
+#french {
+	float: left;
+	width: 50%;
+}
+
+#french img {
+	display: block;
+	width: 100%;
+}
+
+#chicken {
+	float: left;
+	width: 50%;
+}
+
+#chicken img{
+	display: block;
+	width: 100%;
+	clip: rect ()
+}
+
+#bagel {
+	float: left;
+	width: 50%;
+}
+
+#bagel img{
+	display: block;
+	width: 100%;
+}
+
+footer {
+	clear: both;
+}
+
+
+* {
+	outline: 1px solid green;
+}
+
+
+
+
+
+
+
+
+
