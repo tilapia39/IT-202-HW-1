@@ -7,7 +7,7 @@ $email    = "";
 $errors = array(); 
 
 // connect to the database
-$db = mysqli_connect("sql1.njit.edu", "lat33", "j5L3ngLv", "lat33");
+$db = mysqli_connect();
 
 // REGISTER USER
 if (isset($_POST['reg_user'])) {
