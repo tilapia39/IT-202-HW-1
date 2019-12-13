@@ -1,11 +1,11 @@
  
 <?php 
  
-$user = "lat33";  
-$password = "j5L3ngLv";  
-$host = "sql1.njit.edu";  
-$dbase = "lat33";  
-$table = "Newsletters";  
+$user = "";  
+$password = "";  
+$host = "";  
+$dbase = "";  
+$table = "";  
  
  
 $email_entered= $_POST['emailentered']; 
