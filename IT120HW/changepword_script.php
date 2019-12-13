@@ -7,7 +7,7 @@ if (!(isset($_SESSION['login_user']) || $_SESSION['login_user'] == ''))
     header("location:login.php");
 }
 
-$dbcon = mysqli_connect("sql1.njit.edu", "lat33", "j5L3ngLv", "lat33") or die(mysqli_error($dbcon));
+$dbcon = mysqli_connect("") or die(mysqli_error($dbcon));
 
 $password1 = mysqli_real_escape_string($dbcon, $_POST['newPassword']);
 $password2 = mysqli_real_escape_string($dbcon, $_POST['confirmPassword']);
