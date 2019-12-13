@@ -48,65 +48,38 @@ article {
 	width: 400px;
 }
 
-#favmeals {
-	text-align: center;
-}
 
-#cheese {
-	float: left;
-	width: 50%;
-}
-
-#cheese img {
-	display: block;
-	width: 100%;
-}
-
-#french {
-	float: left;
-	width: 50%;
-}
-
-#french img {
-	display: block;
-	width: 100%;
-}
-
-#chicken {
-	float: left;
-	width: 50%;
-}
-
-#chicken img{
-	display: block;
-	width: 100%;
-	clip: rect ()
-}
-
-#bagel {
-	float: left;
-	width: 50%;
-}
-
-#bagel img{
-	display: block;
-	width: 100%;
-}
 
 footer {
 	clear: both;
 }
 
-
-* {
-	outline: 1px solid green;
+.sidenav {
+	float: left;
+  width: 130px;
+  z-index: 1;
+  top: 20px;
+  left: 10px;
+  background: #eee;
+  overflow-x: hidden;
+  padding: 8px 0;
 }
 
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #2196F3;
+  display: block;
+}
 
+.sidenav a:hover {
+  color: #064579;
+}
 
-
-
-
+.website {
+	overflow: auto;
+}
 
 
 

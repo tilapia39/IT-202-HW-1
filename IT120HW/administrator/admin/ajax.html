@@ -1,0 +1,92 @@
+<html>
+<head>
+<script>
+function myAjax(method, type, destination, data){
+	let xhttp = new XMLHttpRequest();
+	method = method.toUpperCase();
+	if(data){
+		data += "&";
+	}
+	else{
+		data = "";
+	}
+	data += "type=" + type;
+	xhttp.onreadystatechange = function(){
+		if(this.readyState == 4&& this.status == 200){
+			destination.innerHTML = this.responseText;
+		}
+	}
+	xhttp.open(method, "backend.php", true);
+	if(method == "POST"){
+		xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+	}
+	if(data){
+		xhttp.send(data);
+	}
+	else{
+		xhttp.send();
+	}
+}
+function onSubmit(){
+	let form = document.forms[0];
+	let sv = form.type.value;
+	switch(sv){
+		case "db": sampleDB();
+			break;
+		default:
+			break;
+	}
+}
+function sampleDB(){
+	let cont = document.getElementById("output");
+	myAjax("POST", "db", cont);
+}
+
+function handleInputs(){
+	let form = document.forms[0];
+	let sv = form.type.value;
+	switch(sv){
+		case "echo":
+			form.number1.style.display = "none";
+			form.number2.style.display = "none";
+			form.message.style.display = "block";
+			break;
+		case "add":
+			form.number1.style.display = "block";
+			form.number2.style.display = "block";
+			form.message.style.display = "none";
+			break;
+		case "html":
+		case "json":
+		default:
+			form.number1.style.display = "none";
+			form.number2.style.display = "none";
+			form.message.style.display = "none";
+			break;
+	}
+}
+</script>
+<style>
+body{background-color: black;}
+section{ width:80%; margin-left: auto; margin-right:auto; background-color:white; padding: 2%;margin-top: 2%;}
+</style>
+</head>
+<body onload="handleInputs();">
+<header>
+
+</head>
+<section>
+	<h1>List all users</h1>
+	<p>This will get all users and their emails from the database.<br>
+	<form onsubmit="onSubmit(); return false;" style="display: inline-grid">
+		<select name="type" onchange="handleInputs();">
+			<option value="db">Get Test Users from DB</option>
+		</select>
+		<input type="submit" value="Send it out"/>
+	</form>
+	
+		<p><b>Output:</b></p>
+	<p id="output"></p>
+</section>
+</body>
+</html>

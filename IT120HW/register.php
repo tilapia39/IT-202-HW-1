@@ -1,14 +1,48 @@
 <?php include('server.php') ?>
+
 <!DOCTYPE html>
+
 <html>
+
 <head>
-  <title>Registration system PHP and MySQL</title>
-  <link rel="stylesheet" type="text/css" href="style.css">
+
+<!-- 
+Author: Luis Tapia
+-->
+
+<meta charset="UTF-8"/>
+
+  <title>Registration</title>
+
+				<link href="mainstyles.css" type="text/css" rel="stylesheet" />
+				<link href="home.css" type="text/css" rel="stylesheet" />
+
 </head>
+
 <body>
-  <div class="header">
+	<header>
+
+		<img src="images/college.jpg" alt="campus" />
+		<nav class="horizontalNavigation">
+			<ul>
+				<li><a href="homework.html">Home</a></li>
+				<li><a href="colleges.html">Colleges</a></li>
+				<li><a href="feedback.html">Feedback</a></li>
+				<li><a href="newreg.php">Newsletter</a></li>
+				<li><a href="login.php">Account</a></li>
+			</ul>
+
+
+
+
+		</nav>
+
+
+
+	</header>
+
+  <div class="register">
   	<h2>Register</h2>
-  </div>
 	
   <form method="post" action="register.php">
   	<?php include('errors.php'); ?>
@@ -35,5 +69,20 @@
   		Already a member? <a href="login.php">Sign in</a>
   	</p>
   </form>
+  </div>
+  </div>
+	
+	
+	
+	
+	
+
+
+	<footer>
+	Luis Tapia &#9830 <a href="mailto:lat33@njit.edu"> lat33@njit.edu </a> &#9830 ORIGINAL WEBSITE DON'T STEAL &#9830
+	</footer>
+
 </body>
+
 </html>
+

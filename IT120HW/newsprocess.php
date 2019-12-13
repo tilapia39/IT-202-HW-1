@@ -41,7 +41,7 @@ if (isset($_POST['reg_name'])) {
   	mysqli_query($db, $query);
   	$_SESSION['fullname'] = $fullname;
   	$_SESSION['success'] = "You will be taken to the login page";
-  	header('location: comics.html');
+  	header('location: thanksnews.html');
   }
 }
 

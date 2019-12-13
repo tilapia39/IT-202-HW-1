@@ -50,7 +50,7 @@ if (isset($_POST['reg_user'])) {
   	mysqli_query($db, $query);
   	$_SESSION['username'] = $username;
   	$_SESSION['success'] = "You will be taken to the login page";
-  	header('location: comics.html');
+  	header('location: thanks.html');
   }
 }
 

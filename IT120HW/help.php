@@ -24,16 +24,21 @@ header("location: profile.php");
 		<li><a href="newreg.php">Newsletter</a></li>
 		<li><a href="login.php">Account</a></li>
         <li><a href="help.php">Contact</a></li>
-		 <li><a href="password.html">Password</a></li>
-	
+        <li><a href="password.html">Password</a></li>
          </ul>
       </nav>      
 </header>
 
-Thank you for registering an account for my website. You will now be able to access certain features available to you.
+If you have forgotten your password please email me through this form and provide your email so that I can contact you back.
+
+<form method="post" action="sendmail.php">
+  Email: <input name="email" type="text" /><br>
+  Message:<br>
+  <textarea name="message" rows="15" cols="40"></textarea><br>
+  <input type="submit" />
+</form>
 
 <div id="profile">
-<b id="welcome">Welcome : <i><?php echo $login_session; ?></i></b>
 <b id="logout"><a href="logout.php">Log Out</a></b>
 </div>
 </body>
