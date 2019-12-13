@@ -2,7 +2,7 @@
 	session_start();
 
 	// connect to database
-	$db = mysqli_connect("sql1.njit.edu", "lat33", "j5L3ngLv", "lat33");
+	$db = mysqli_connect("");
 
 	// variable declaration
 	$username = "";
