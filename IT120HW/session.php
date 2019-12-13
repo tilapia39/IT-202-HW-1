@@ -1,5 +1,5 @@
 <?php
- $conn = mysqli_connect("sql1.njit.edu", "lat33", "j5L3ngLv", "lat33");
+ $conn = mysqli_connect("");
 session_start();
 
 $user_check = $_SESSION['login_user'];
