@@ -1,9 +1,9 @@
 <?php
 class DBController {
-	private $host = "sql1.njit.edu";
-	private $user = "lat33";
-	private $password = "j5L3ngLv";
-	private $database = "lat33";
+	private $host = "";
+	private $user = "";
+	private $password = "";
+	private $database = "";
 	private $conn;
 	
 	function __construct() {
